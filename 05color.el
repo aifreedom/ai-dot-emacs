@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.elisp/color-theme-6.6.0")
+(add-to-list 'load-path (concat elisp-home "/color-theme-6.6.0"))
 (eval-when-compile    (require 'color-theme))
 (defun my-color-theme ()
   "Color theme by Ai.Freedom, created 2008-07-22."

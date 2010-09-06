@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.elisp/hide")
+(add-to-list 'load-path (concat elisp-home "/hide"))
 
 ;;hide region
 (require 'hide-region)

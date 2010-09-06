@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.elisp/python")
+(add-to-list 'load-path (concat elisp-home "/python"))
 
 (setq auto-mode-alist (cons '("\\.py$" . python-mode) auto-mode-alist))
 (setq interpreter-mode-alist (cons '("python" . python-mode)

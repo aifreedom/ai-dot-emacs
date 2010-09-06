@@ -1,7 +1,11 @@
 ;;;;导入CEDET的各个插件
 ;; ---------------------------------------
 ;; Load CEDET
-(load-file "~/.elisp/cedet-1.0pre6/common/cedet.el")
+(add-to-list 'load-path (concat elisp-home "/cedet-1.0pre6/semantic"))
+(add-to-list 'load-path (concat elisp-home "/cedet-1.0pre6/eieio"))
+(add-to-list 'load-path (concat elisp-home "/cedet-1.0pre6/speedbar"))
+(add-to-list 'load-path (concat elisp-home "/ecb-2.32"))
+(load-file (concat elisp-home "/cedet-1.0pre6/common/cedet.el"))
 
 ;; Enabling various SEMANTIC minor modes.  See semantic/INSTALL for more ideas.
 ;; Select one of the following:

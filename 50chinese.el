@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.elisp/unicad-1.1.6-beta")
+(add-to-list 'load-path (concat elisp-home "/unicad-1.1.6-beta"))
 (require 'unicad)
 
 (let ((l '(chinese-gb2312
