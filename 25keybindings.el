@@ -18,3 +18,9 @@
 (global-set-key (kbd "C-c g") 'gnus)
 
 (windmove-default-keybindings 'meta)
+
+
+(global-set-key (kbd "s-n") (quote windmove-down))
+(global-set-key (kbd "s-p") (quote windmove-up))
+(global-set-key (kbd "s-b") (quote windmove-left))
+(global-set-key (kbd "s-f") (quote windmove-right))
