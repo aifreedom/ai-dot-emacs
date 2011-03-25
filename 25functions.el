@@ -7,6 +7,7 @@
 	 (fname (completing-read (car prompt) (cdr prompt) nil nil)))
     ;;    (find-file (cdr (assoc-ignore-representation fname tocpl))))) 
     (find-file (cdr (assoc-string fname tocpl))))) 
+(setq recentf-max-saved-items 50)
 (global-set-key [(control x)(control r)] 'recentf-open-files-compl) ;;绑定C-x C-r到recentf上    
 (global-set-key (kbd "C-c C-r") 'recentf-open-files-compl) ;;绑定C-c C-r到recentf上
 
