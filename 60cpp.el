@@ -46,6 +46,10 @@
  (interactive)
  (set (make-local-variable 'compile-command) (concat "g++ " (buffer-name (current-buffer)) " -g -ggdb -o " (file-name-sans-extension (buffer-name (current-buffer))))))
 
+(defun java-set-compile-command ()
+ (interactive)
+ (set (make-local-variable 'compile-command) (concat "javac " (buffer-name (current-buffer)))))
+
 
 ;; (defun c++-set-compile-command ()
 ;;   (interactive)
@@ -57,13 +61,17 @@
   (cond ((equal ext "c") (c-set-compile-command))
 	;; ((equal ext "h") (set-header-compile-command))
 	((equal ext "cpp") (c++-set-compile-command))
+	((equal ext "java") (java-set-compile-command))
 	;; ((equal ext "tex") (set-tex-compile-command))
 	(t (set (make-local-variable 'compile-command) ""))))
 
 ;; 在这里加一个 find-file-hook, 然后直接把 compile 绑到 f9, 当然键你可以随便选了..
 (add-hook 'find-file-hook 'set-compile-command)
 
-
+(defun ai-compile()
+  (interactive)
+  (set-compile-command)
+  (compile))
 
 ;; (defun c-set-compile-command ()
 ;;   (interactive)
