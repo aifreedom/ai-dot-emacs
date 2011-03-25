@@ -3,6 +3,7 @@
 
 (add-to-list 'load-path elisp-home)
 (add-to-list 'load-path "/usr/share/emacs/site-lisp")
+(add-to-list 'load-path (concat elisp-home "/magit"))
 
 (load-file (concat preference-home "/05color.el"))
 (load-file (concat preference-home "/05ui.el"))
