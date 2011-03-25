@@ -113,12 +113,30 @@ bookmarksopen=true]{hyperref}
 
 \\usepackage{fontspec,xltxtra,xunicode}
 \\usepackage{pstricks}
-\\usepackage[dvipdfm,a4paper,
+\\usepackage[dvipdfmx,a4paper,
 hyperindex=true,
-pdfauthor=Ai.Freedom,
+backref=section,
+pdftitle={<lisp>(muse-publish-escape-specials-in-string
+  (muse-publishing-directive \"title\") 'document)</lisp>},
+pdfauthor={<lisp>(muse-publishing-directive \"author\")</lisp>},
+pdfsubject={<lisp>(muse-publish-escape-specials-in-string
+  (muse-publishing-directive \"title\") 'document)</lisp>},
 bookmarks=true,
 bookmarksnumbered=true,
-bookmarksopen=true]{hyperref}
+bookmarksopenlevel=1,
+pdfpagemode=UseOutlines,
+CJKbookmarks=true,
+colorlinks=true,
+citecolor=blue,
+linkcolor=blue,
+breaklinks=true,
+pdfborder=0 0 0,
+pdfstartview=FitW,
+pdffitwindow=true,
+linkbordercolor=white, % 链接边框设置为白色
+citebordercolor=white, % 链接边框设置为白色
+urlbordercolor=white]{hyperref}
+
 \\usepackage{graphicx}
 
 \\def\\museincludegraphics{%
@@ -129,17 +147,17 @@ bookmarksopen=true]{hyperref}
   \\includegraphics[width=0.75\\textwidth]
 }
 
-\\usepackage[slantfont,boldfont,CJKtextspaces,CJKmathspaces]{xeCJK}
-\\setCJKmainfont[BoldFont={Adobe Heiti Std}, ItalicFont={Adobe Kaiti
-  Std}]{SimSun}
+\\usepackage[CJKtextspaces,CJKmathspaces,CJKchecksingle]{xeCJK}
+\\setCJKmainfont[BoldFont={Adobe Heiti Std}, ItalicFont={Adobe Kaiti Std}]{Adobe Song Std}
 \\setCJKmonofont{Adobe Fangsong Std}
+\\xeCJKsetcharclass{\"0}{\"2E7F}{0}
+\\xeCJKsetcharclass{\"2E80}{\"FFFF}{1}
 
 \\setmainfont[Mapping=tex-text]{Linux Libertine O}
 \\setsansfont[Mapping=tex-text]{Linux Biolinum O}
 
-\\setmonofont{Liberation Mono}
-
-\\punctstyle{kaiming}
+\\setmonofont{Courier 10 Pitch} 
+\\punctstyle{quanjiao} 
 
 \\begin{document}
 
@@ -156,3 +174,5 @@ bookmarksopen=true]{hyperref}
 
 (setq muse-latexcjk-footer
       "\\end{document}\n")
+
+(setq muse-publish-generate-contents t)
