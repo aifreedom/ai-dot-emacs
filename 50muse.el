@@ -35,30 +35,34 @@
 
 (setq muse-project-alist
       '(("Notes" ("~/Documents/wiki/Notes" :default "index")
-	 (:base "xhtml" :path "~/Documents/wiki/Notes/html")
-	 (:base "pdfcjk" :path "~/Documents/wiki/Notes/pdf")
-	 )
-	("TOEFL Journal" ("~/Documents/TOEFL/Journal" :default "index")
-	 (:base "xhtml" :path "~/Documents/TOEFL/Journal/html")
-	 (:base "latexcjk" :path "~/Documents/TOEFL/Journal/latex")
-	 (:base "pdfcjk" :path "~/Documents/TOEFL/Journal/pdf"))
-	("WikiPlanner"
-	 ("~/Plans"           ;; where your Planner pages are located
-	  :default "TaskPool" ;; use value of `planner-default-page'
-	  :major-mode planner-mode
-	  :visit-link planner-visit-link)
+         (:base "xhtml" :path "~/Documents/wiki/Notes/html")
+         (:base "pdfcjk" :path "~/Documents/wiki/Notes/pdf")
+         )
+        ("SICP" ("~/Documents/wiki/SICP" :default "index")
+         (:base "xhtml" :path "~/Documents/wiki/SICP/html")
+         (:base "pdfcjk" :path "~/Documents/wiki/SICP/pdf")
+         )
+        ("TOEFL Journal" ("~/Documents/TOEFL/Journal" :default "index")
+         (:base "xhtml" :path "~/Documents/TOEFL/Journal/html")
+         (:base "latexcjk" :path "~/Documents/TOEFL/Journal/latex")
+         (:base "pdfcjk" :path "~/Documents/TOEFL/Journal/pdf"))
+        ("WikiPlanner"
+         ("~/Plans"           ;; where your Planner pages are located
+          :default "TaskPool" ;; use value of `planner-default-page'
+          :major-mode planner-mode
+          :visit-link planner-visit-link)
 	 
 	 ;; This next part is for specifying where Planner pages
 	 ;; should be published and what Muse publishing style to
 	 ;; use.  In this example, we will use the XHTML publishing
 	 ;; style.
 
-	 (:base "planner-xhtml"
-		;; where files are published to
-		;; (the value of `planner-publishing-directory', if
-		;;  you have a configuration for an older version
-		;;  of Planner)
-		:path "~/public_html/Plans"))))
+         (:base "planner-xhtml"
+                ;; where files are published to
+                ;; (the value of `planner-publishing-directory', if
+                ;;  you have a configuration for an older version
+                ;;  of Planner)
+                :path "~/public_html/Plans"))))
 
 (setq muse-latex2png-scale-factor 1.5)
 
@@ -131,7 +135,7 @@ citecolor=blue,
 linkcolor=blue,
 breaklinks=true,
 pdfborder=0 0 0,
-pdfstartview=FitW,
+% pdfstartview=FitW,
 pdffitwindow=true,
 linkbordercolor=white, % 链接边框设置为白色
 citebordercolor=white, % 链接边框设置为白色
