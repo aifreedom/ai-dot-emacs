@@ -21,6 +21,7 @@
 (setq frame-title-format "%b@emacs") ;;在标题栏显示buffer的名字
 (which-function-mode) ;;在状态条上显示当前光标在哪个函数体内部
 
+
 (setq version-control nil)
 (setq kept-new-versions 3)
 (setq delete-old-versions t)

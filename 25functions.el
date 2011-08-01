@@ -149,3 +149,9 @@ that was stored with ska-point-to-register."
                  (t
                   (message
                    "The region has %d words." count))))))
+
+;; -- define a new command to join multiple lines together --
+(defun join-lines () (interactive)
+  (setq fill-column 100000)
+  (fill-paragraph nil)
+  (setq fill-column 70))

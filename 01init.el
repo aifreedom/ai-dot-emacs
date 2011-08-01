@@ -33,6 +33,7 @@
 ;; (load-file (concat preference-home "/60jabber.el"))
 (load-file (concat preference-home "/60git.el"))
 (load-file (concat preference-home "/60calendar.el"))
+(load-file (concat preference-home "/60MATLAB.el"))
 ;; (load-file (concat preference-home "/csharp.el"))
 
 
