@@ -5,6 +5,7 @@
 (autoload 'matlab-mode "~/.elisp/matlab/matlab" "Enter Matlab mode." t)
 (autoload 'matlab-shell "~/.elisp/matlab/matlab" "Interactive Matlab mode." t)
 
+(setq matlab-shell-command-switches "-nodisplay")
 
 (defun my-matlab-mode-hook ()
   (setq matlab-function-indent t)	; if you want function bodies indented
